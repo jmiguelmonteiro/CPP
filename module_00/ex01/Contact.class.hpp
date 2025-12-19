@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 14:41:28 by josemigu          #+#    #+#             */
-/*   Updated: 2025/12/13 16:29:25 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:43:13 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
 
 class Contact {
 
@@ -28,8 +29,8 @@ private:
 	
 public:
 
-	Contact( void );
-	~Contact( void );
+	Contact(void);
+	~Contact(void);
 
 	std::string	get_firstName(void) const;
 	std::string	get_lastName(void) const;
@@ -42,6 +43,10 @@ public:
 	void	set_nickName(std::string nickName);
 	void	set_phoneNumber(std::string phoneNumber);
 	void	set_darkestSecret(std::string darkestSecret);
+
+	void	DisplayContactLine(int index);
+	void	DisplayContactDetails(int index);
+	
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 14:30:25 by josemigu          #+#    #+#             */
-/*   Updated: 2025/12/13 16:47:24 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:40:04 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ int	main(void)
 
 	std::cout << "Welcome to the PhoneBook App\n\n";
 	while (true) {
-		std::cout << "Please enter an option (ADD, SEARCH or EXIT):\n";
+		std::cout << "Please enter an option (ADD, SEARCH or EXIT): ";
 		if (!std::getline(std::cin, input))
 			break;
 		if (input == "EXIT")
 			break;
 		else if (input == "SEARCH")
-			std::cout << "SEARCH keyword\n";
+			phoneBook.SearchPhoneBook();
 		else if (input == "ADD")
 			std::cout << "ADD keyword\n";
 		else

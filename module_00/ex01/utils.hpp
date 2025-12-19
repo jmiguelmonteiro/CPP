@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
+/*   utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 14:41:28 by josemigu          #+#    #+#             */
-/*   Updated: 2025/12/19 16:25:57 by josemigu         ###   ########.fr       */
+/*   Created: 2025/12/19 16:18:53 by josemigu          #+#    #+#             */
+/*   Updated: 2025/12/19 16:37:22 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef UTILS_HPP
+# define UTILS_HPP
 
-# include "utils.hpp"
-# include "Contact.class.hpp"
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cstdlib>
 
-class PhoneBook {
-
-private:
-
-	Contact	phoneBookArray[8];
-	int		oldestContactIndex;
-	
-public:
-
-	PhoneBook(void);
-	~PhoneBook(void);
-
-	void	SearchPhoneBook (void);
-	void	DisplayPhoneBook (void);
-	
-};
+bool is_all_digits(std::string s);
 
 #endif

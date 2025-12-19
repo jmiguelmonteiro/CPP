@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 14:46:36 by josemigu          #+#    #+#             */
-/*   Updated: 2025/12/13 16:36:45 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:49:48 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 Contact::Contact( void ) {
 	
-	std::cout << "Contact Class: Constructor called.\n";
+	// std::cout << "Contact Class: Constructor called.\n";
 	return ;
 }
 
 Contact::~Contact( void ) {
 	
-	std::cout << "Contact Class: Destructor called.\n";
+	// std::cout << "Contact Class: Destructor called.\n";
 	return ;
 }
 
@@ -62,4 +62,39 @@ void	Contact::set_phoneNumber(std::string phoneNumber) {
 
 void	Contact::set_darkestSecret(std::string darkestSecret) {
 	this->darkestSecret = darkestSecret;
+}
+
+void	Contact::DisplayContactLine(int index) {
+	std::string	firstName;
+	std::string	lastName;
+	std::string	nickName;
+	
+	std::cout << "|" << std::setw(10) << index;
+
+	firstName = this->firstName;
+	if (firstName.length() > 10)
+		firstName = firstName.substr(0, 9) + ".";
+	std::cout << "|" << std::setw(10) << firstName;
+
+	lastName = this->lastName;
+	if (lastName.length() > 10)
+		lastName = lastName.substr(0, 9) + ".";
+	std::cout << "|" << std::setw(10) << lastName;
+	
+	nickName = this->nickName;
+	if (nickName.length() > 10)
+		nickName = nickName.substr(0, 9) + ".";
+	std::cout << "|" << std::setw(10) << nickName << "|\n";
+
+	return ;	
+}
+
+void	Contact::DisplayContactDetails(int index) {
+	std::cout << "Index.........: " << index << "\n";
+	std::cout << "First Name....: " << this->firstName << "\n";
+	std::cout << "Last Name.....: " << this->lastName << "\n";
+	std::cout << "Nick Name.....: " << this->nickName << "\n";
+	std::cout << "Phone Number..: " << this->phoneNumber << "\n";
+	std::cout << "Darkest Secret: " << this->darkestSecret << "\n";
+	return ;		
 }
