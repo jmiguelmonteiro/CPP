@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 14:46:36 by josemigu          #+#    #+#             */
-/*   Updated: 2025/12/19 16:54:34 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/01/07 13:07:07 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,11 +90,54 @@ void	Contact::DisplayContactLine(int index) {
 }
 
 void	Contact::DisplayContactDetails(int index) {
+	std::cout << "\n";
 	std::cout << "Index.........: " << index << "\n";
 	std::cout << "First Name....: " << this->firstName << "\n";
 	std::cout << "Last Name.....: " << this->lastName << "\n";
 	std::cout << "Nick Name.....: " << this->nickName << "\n";
 	std::cout << "Phone Number..: " << this->phoneNumber << "\n";
 	std::cout << "Darkest Secret: " << this->darkestSecret << "\n";
+	std::cout << "\n";
 	return ;		
+}
+
+bool	Contact::AddContact(void) {
+	std::string	firstName;
+	std::string	lastName;
+	std::string	nickName;
+	std::string	phoneNumber;
+	std::string	darkestSecret;
+
+	std::cout << "First Name: ";
+	std::getline(std::cin, firstName);
+	if (firstName.empty())
+		return (false);
+
+	std::cout << "Last Name: ";
+	std::getline(std::cin, lastName);
+	if (lastName.empty())
+		return (false);
+		
+	std::cout << "Nick Name: ";
+	std::getline(std::cin, nickName);
+	if (nickName.empty())
+		return (false);
+		
+	std::cout << "Phone Number: ";
+	std::getline(std::cin, phoneNumber);
+	if (phoneNumber.empty())
+		return (false);
+		
+	std::cout << "Darkest Secret: ";
+	std::getline(std::cin, darkestSecret);
+	if (darkestSecret.empty())
+		return (false);
+
+	this->firstName = firstName;
+	this->lastName = lastName;
+	this->nickName = nickName;
+	this->phoneNumber = phoneNumber;
+	this->darkestSecret = darkestSecret;
+
+	return (true);
 }

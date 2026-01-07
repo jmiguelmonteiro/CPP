@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 14:30:25 by josemigu          #+#    #+#             */
-/*   Updated: 2025/12/19 16:40:04 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/01/07 12:25:59 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 		else if (input == "SEARCH")
 			phoneBook.SearchPhoneBook();
 		else if (input == "ADD")
-			std::cout << "ADD keyword\n";
+			phoneBook.AddContact();
 		else
 			std::cout << "Invalid option!!!\n";
 	}

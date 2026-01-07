@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 14:41:28 by josemigu          #+#    #+#             */
-/*   Updated: 2025/12/19 16:43:13 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/01/07 12:56:00 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ public:
 
 	void	DisplayContactLine(int index);
 	void	DisplayContactDetails(int index);
-	
+	bool	AddContact(void);
 };
 
 #endif
