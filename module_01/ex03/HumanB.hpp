@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 19:32:36 by josemigu          #+#    #+#             */
-/*   Updated: 2026/01/09 19:54:22 by josemigu         ###   ########.fr       */
+/*   Created: 2025/12/10 14:41:28 by josemigu          #+#    #+#             */
+/*   Updated: 2026/01/10 16:59:36 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-Zombie* zombieHorde( int N, std::string name ) {
+# include <iostream>
+# include <string>
+# include "Weapon.hpp"
+
+class HumanB {
+
+private:
+
+	std::string	name;
+	Weapon*		weapon;
 	
-	if (N < 1) {
-		std::cout << "Horde has to have at least 1 element!\n";
-		return (NULL);
-	}
-		
-	Zombie *horde = new Zombie[N];
-	for (int i = 0; i < N; i++)
-		horde[i].setName(name);
-	return horde;
-}
+public:
+
+	HumanB( std::string name );
+	~HumanB( void );
+
+	void	attack( void );
+	void	setWeapon( Weapon& weapon );
+};
+
+#endif

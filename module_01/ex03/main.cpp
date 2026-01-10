@@ -6,27 +6,33 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:15:41 by josemigu          #+#    #+#             */
-/*   Updated: 2026/01/09 19:55:25 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/01/10 17:25:11 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int	main(void) {
+int main() {
 
-	Zombie	*zombie_horde;
+	{
+        Weapon club = Weapon("crude spiked club");
 
-	zombie_horde = zombieHorde(0, "Horde 0 zombie element");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
+	{
+		Weapon club = Weapon("crude spiked club");
 
-	zombie_horde = zombieHorde(1, "Horde 1 zombies element");
-	for (int i = 0; i < 1; i++)
-		zombie_horde[i].announce();
-	delete [] zombie_horde;
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
 
-	zombie_horde = zombieHorde(5, "Horde 5 zombies element");
-	for (int i = 0; i < 5; i++)
-		zombie_horde[i].announce();
-	delete [] zombie_horde;
-
-	return (0);
+    return 0;
 }

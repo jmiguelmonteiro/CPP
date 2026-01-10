@@ -10,23 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <string>
+#include <iostream>
 
 int	main(void) {
 
-	Zombie	*zombie_horde;
+	std::string	string = "HI THIS IS BRAIN";
+	std::string	*stringPTR = &string;
+	std::string	&stringREF = string;
 
-	zombie_horde = zombieHorde(0, "Horde 0 zombie element");
+	std::cout << "The memory address of the string variable: " << &string << std::endl;
+	std::cout << "The memory address held by stringPTR.....: " << stringPTR << std::endl;
+	std::cout << "The memory address held by stringREF.....: " << &stringREF << std::endl;
 
-	zombie_horde = zombieHorde(1, "Horde 1 zombies element");
-	for (int i = 0; i < 1; i++)
-		zombie_horde[i].announce();
-	delete [] zombie_horde;
-
-	zombie_horde = zombieHorde(5, "Horde 5 zombies element");
-	for (int i = 0; i < 5; i++)
-		zombie_horde[i].announce();
-	delete [] zombie_horde;
+	std::cout << "The value of the string variable.: " << string << std::endl;
+	std::cout << "The value pointed to by stringPTR: " << *stringPTR << std::endl;
+	std::cout << "The value pointed to by stringREF: " << stringREF << std::endl;
 
 	return (0);
 }
