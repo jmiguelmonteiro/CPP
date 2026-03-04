@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 11:53:28 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/04 15:31:46 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/04 15:36:57 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,12 @@ public:
     Fixed	operator++(int);
     Fixed&	operator--();
     Fixed	operator--(int);
+	
+	// min, max
+	static Fixed&		min(Fixed& f1, Fixed& f2);
+	static const Fixed&	min(const Fixed& f1, const Fixed& f2);
+	static Fixed&		max(Fixed& f1, Fixed& f2);
+	static const Fixed&	max(const Fixed& f1, const Fixed& f2);
 	
 	// Member functions
 	int getRawBits( void ) const;

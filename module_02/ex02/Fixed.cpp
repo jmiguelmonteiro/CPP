@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 11:53:36 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/04 13:21:23 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/04 15:58:53 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,52 @@ int	Fixed::toInt( void ) const {
 std::ostream& operator<<(std::ostream& os, Fixed const& fixed) {
 	os << fixed.toFloat();
 	return (os);
+}
+
+bool	Fixed::operator>(const Fixed& other) const {
+	return (this->value > other.value);
+}
+
+bool	Fixed::operator<(const Fixed& other) const {
+	return (this->value < other.value);
+}
+
+bool	Fixed::operator>=(const Fixed& other) const {
+	return (this->value >= other.value);
+}
+
+bool	Fixed::operator<=(const Fixed& other) const {
+	return (this->value <= other.value);
+}
+
+bool	Fixed::operator==(const Fixed& other) const {
+	return (this->value == other.value);
+}
+
+bool	Fixed::operator!=(const Fixed& other) const {
+	return (this->value != other.value);
+}
+
+Fixed	Fixed::operator+(const Fixed& other) const {
+	Fixed res;
+	res.value = this->value + other.value;
+	return (res);
+}
+
+Fixed	Fixed::operator-(const Fixed& other) const {
+	Fixed res;
+	res.value = this->value - other.value;
+	return (res);
+}
+
+Fixed	Fixed::operator*(const Fixed& other) const {
+	Fixed res;
+	res.value = this->value * other.value;
+	return (res);
+}
+
+Fixed	Fixed::operator/(const Fixed& other) const {
+	Fixed res;
+	res.value = this->value / other.value;
+	return (res);
 }
