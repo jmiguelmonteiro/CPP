@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 11:53:28 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/04 15:36:57 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/06 13:37:38 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,12 @@ public:
 
 	// The 4 increment/decrement (pre-increment and post-increment, pre-decrement and
 	// post-decrement) operators
-    Fixed&	operator++();
-    Fixed	operator++(int);
-    Fixed&	operator--();
-    Fixed	operator--(int);
+	Fixed&	operator++();		// Overloading the prefix operator
+	Fixed	operator++(int);	// Overloading the postfix operator
+	Fixed&	operator--();		// Overloading the prefix operator
+	Fixed	operator--(int);	// Overloading the postfix operator
 	
-	// min, max
+	// static member function min, max
 	static Fixed&		min(Fixed& f1, Fixed& f2);
 	static const Fixed&	min(const Fixed& f1, const Fixed& f2);
 	static Fixed&		max(Fixed& f1, Fixed& f2);
