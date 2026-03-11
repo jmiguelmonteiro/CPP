@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 18:00:54 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/06 18:14:58 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/11 13:22:39 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class ClapTrap
 {
 private:
 	std::string	name;
-	int			hitPoints;
-	int			energyPoints;
-	int			attackDamage;
+	long			hitPoints;
+	int				energyPoints;
+	unsigned int	attackDamage;
 	
 public:
     // Default Constructor
