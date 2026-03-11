@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 18:00:54 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/11 15:39:52 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/11 16:32:08 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ class ClapTrap
 		// Destructor
 		virtual ~ClapTrap();
 
-		virtual void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		virtual void	attack(const std::string& target);
+		void 			takeDamage(unsigned int amount);
+		void 			beRepaired(unsigned int amount);
 };
 
 #endif

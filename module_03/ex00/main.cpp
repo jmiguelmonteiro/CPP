@@ -6,16 +6,13 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:15:41 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/11 13:04:18 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/11 16:17:27 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 int main( void ) {
-
-	// ClapTrap	nameless;
-	// ClapTrap	bob("Bob");
 
     ClapTrap trapTiago("Tiago");
     ClapTrap trapKiko("Kiko");
@@ -31,7 +28,7 @@ int main( void ) {
     for (int i = 0; i < 11; i++)
         noName.takeDamage(25);
     ClapTrap cloneTiago(trapTiago);
-    cloneTiago.attack("Alberto"); // dont attack because dont have EnergyPoints.
+    cloneTiago.attack("Alberto");
     ClapTrap test;
     test.beRepaired(4294967295);
     test.beRepaired(4294967295);
