@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 14:23:54 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/13 15:36:54 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:54:51 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class DiamondTrap : public FragTrap, public ScavTrap {
 
 		void whoAmI();
 		long	getHitPoints();
+		using ScavTrap::attack;
 };
 
 #endif
