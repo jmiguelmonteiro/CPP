@@ -5,7 +5,12 @@
 # include "ClapTrap.hpp"
 
 class ScavTrap : virtual public ClapTrap {
-	public:
+	protected:
+		long			hitPoints;
+		int				energyPoints;
+		unsigned int	attackDamage;
+
+		public:
 		// Default Constructor
 		ScavTrap();
 		

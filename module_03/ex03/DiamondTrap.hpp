@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/13 14:23:54 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/13 15:36:54 by josemigu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef DIAMONDTRAP_HPP
 # define DIAMONDTRAP_HPP
 
@@ -11,6 +23,11 @@ class DiamondTrap : public FragTrap, public ScavTrap {
 	private:
 		std::string	name;
 
+	// protected:
+	// 	long			hitPoints;
+	// 	int				energyPoints;
+	// 	unsigned int	attackDamage;
+		
 	public:
 		// Default Constructor
 		DiamondTrap();
@@ -25,6 +42,9 @@ class DiamondTrap : public FragTrap, public ScavTrap {
 		
 		// Destructor
 		~DiamondTrap();
+
+		void whoAmI();
+		long	getHitPoints();
 };
 
 #endif

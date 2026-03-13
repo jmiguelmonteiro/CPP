@@ -2,14 +2,14 @@
 
 // Default Constructor
 ScavTrap::ScavTrap() : ClapTrap() {
-	this->hitPoints = 100;
+	this->hitPoints = 150;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
     std::cout << this->name << ": ScavTrap default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
-	this->hitPoints = 100;
+	this->hitPoints = 150;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
     std::cout << this->name << ": ScavTrap constructor with name parameter called" << std::endl;

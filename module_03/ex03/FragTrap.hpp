@@ -5,6 +5,11 @@
 # include "ClapTrap.hpp"
 
 class FragTrap : virtual public ClapTrap {
+	// protected:
+	// 	long			hitPoints;
+	// 	int				energyPoints;
+	// 	unsigned int	attackDamage;
+
 	public:
 		// Default Constructor
 		FragTrap();
