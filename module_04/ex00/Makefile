@@ -6,7 +6,7 @@
 #    By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/07 14:21:03 by josemigu          #+#    #+#              #
-#    Updated: 2026/03/18 15:32:50 by josemigu         ###   ########.fr        #
+#    Updated: 2026/03/18 17:21:16 by josemigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = a.out
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.Cpp
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

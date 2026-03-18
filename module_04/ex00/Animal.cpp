@@ -1,8 +1,9 @@
 #include "Animal.hpp"
 
 // Default Constructor
-Animal::Animal() {
+Animal::Animal() : type("") {
     std::cout << "Animal default constructor called" << std::endl;
+	this->type = "(type not defined)";
 }
 
 // Copy Constructor
@@ -23,4 +24,12 @@ Animal& Animal::operator=(const Animal& other) {
 // Destructor
 Animal::~Animal() {
     std::cout << "Animal destructor called" << std::endl;
+}
+
+void	Animal::makeSound(void) const {
+	return ;
+}
+
+std::string		Animal::getType(void) const {
+	return this->type;
 }

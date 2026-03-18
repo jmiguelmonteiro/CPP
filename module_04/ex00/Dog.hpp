@@ -18,6 +18,8 @@ class Dog: public Animal
 		
 		// Destructor
 		~Dog();
+
+		void	makeSound(void) const;
 };
 
 #endif

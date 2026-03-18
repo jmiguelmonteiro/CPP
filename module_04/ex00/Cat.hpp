@@ -19,8 +19,7 @@ class Cat: public Animal
 		// Destructor
 		~Cat();
 
-		void	makeSound(void);
-
+		void	makeSound(void) const;
 };
 
 #endif
