@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 18:00:45 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/11 16:04:47 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/18 12:23:26 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,9 @@ void ClapTrap::takeDamage(unsigned int amount) {
 	this->hitPoints -= amount;
 	if (this->hitPoints <= 0) {
 		std::cout  << this->name << ": ClapTrap has died with this attack" << std::endl;
-	}
-	if (this->hitPoints < 0)
 		this->hitPoints = 0;
-	std::cout  << this->name << ": ClapTrap has now " << this->hitPoints << " hit points and " << this->energyPoints << " energy points left" << std::endl;
+	} else
+		std::cout  << this->name << ": ClapTrap has now " << this->hitPoints << " hit points and " << this->energyPoints << " energy points left" << std::endl;
 	return ;
 }
 

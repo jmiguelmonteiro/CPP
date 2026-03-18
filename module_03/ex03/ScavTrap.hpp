@@ -5,10 +5,10 @@
 # include "ClapTrap.hpp"
 
 class ScavTrap : virtual public ClapTrap {
-	// protected:
-	// 	long			hitPoints;
-	// 	int				energyPoints;
-	// 	unsigned int	attackDamage;
+	protected:
+		long			hitPoints;
+		int				energyPoints;
+		unsigned int	attackDamage;
 
 	public:
 		// Default Constructor
@@ -23,10 +23,10 @@ class ScavTrap : virtual public ClapTrap {
 		ScavTrap& operator=(const ScavTrap& other);
 		
 		// Destructor
-		~ScavTrap();
+		virtual ~ScavTrap();
 
-		void	attack(const std::string& target);
-		void	guardGate();
+		virtual void	attack(const std::string& target);
+		void			guardGate();
 };
 
 #endif

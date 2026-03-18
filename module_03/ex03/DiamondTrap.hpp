@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 14:23:54 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/13 16:54:51 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/18 14:02:03 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ class DiamondTrap : public FragTrap, public ScavTrap {
 	private:
 		std::string	name;
 
-	// protected:
-	// 	long			hitPoints;
-	// 	int				energyPoints;
-	// 	unsigned int	attackDamage;
+	protected:
+		long			hitPoints;
+		int				energyPoints;
+		unsigned int	attackDamage;
 		
 	public:
 		// Default Constructor
@@ -43,7 +43,7 @@ class DiamondTrap : public FragTrap, public ScavTrap {
 		// Destructor
 		~DiamondTrap();
 
-		void whoAmI();
+		void	whoAmI();
 		long	getHitPoints();
 		using ScavTrap::attack;
 };

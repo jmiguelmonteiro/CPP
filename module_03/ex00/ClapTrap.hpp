@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 18:00:54 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/13 15:45:12 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/18 12:18:52 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
     ClapTrap& operator=(const ClapTrap& other);
     
     // Destructor
-    virtual	~ClapTrap();
+    ~ClapTrap();
 
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
