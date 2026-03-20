@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 15:33:30 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 15:43:09 by josemigu         ###   ########.fr       */
+/*   Created: 2026/03/20 17:55:34 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/20 17:56:43 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "MateriaSource.hpp"
 
-int main(void) {
+MateriaSource::MateriaSource() {
 
-	// Animal animal;
+}
 
-	Dog	dog;
+MateriaSource::MateriaSource(const MateriaSource& other) {
+
+}
+
+MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
+
+}
+
+MateriaSource::~MateriaSource() {
 	
-	dog.makeSound();
+}
 
-	return 0;
+void MateriaSource::learnMateria(AMateria*) {
+	
+}
+
+AMateria* MateriaSource::createMateria(std::string const & type) {
+	
 }

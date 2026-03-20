@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 15:33:30 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 15:43:09 by josemigu         ###   ########.fr       */
+/*   Created: 2026/03/20 17:04:35 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/20 17:15:13 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "AMateria.hpp"
 
-int main(void) {
+AMateria::AMateria(std::string const & type) {
+	this->type = type;
+}
 
-	// Animal animal;
+AMateria::AMateria() {
 
-	Dog	dog;
+}
+
+AMateria::AMateria(const AMateria& other) {
+
+}
+
+AMateria& AMateria::operator=(const AMateria& other) {
 	
-	dog.makeSound();
+}
 
-	return 0;
+AMateria::~AMateria() {
+	
+}
+
+std::string const & AMateria::getType() const {
+	return this->type;
 }

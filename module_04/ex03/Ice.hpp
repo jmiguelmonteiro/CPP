@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 15:33:30 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 15:43:09 by josemigu         ###   ########.fr       */
+/*   Created: 2026/03/20 16:49:37 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/20 18:13:45 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef ICE_HPP
+# define ICE_HPP
 
-int main(void) {
+# include "AMateria.hpp"
 
-	// Animal animal;
+class Ice : public AMateria {
 
-	Dog	dog;
-	
-	dog.makeSound();
+	public:
+		Ice();
+		Ice(const Ice& other);
+		Ice& operator=(const Ice& other);
+		~Ice();
 
-	return 0;
-}
+		AMateria* clone() const;
+		void use(ICharacter& target);
+};
+
+#endif

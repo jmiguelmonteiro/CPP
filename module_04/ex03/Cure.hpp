@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 15:33:30 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 15:43:09 by josemigu         ###   ########.fr       */
+/*   Created: 2026/03/20 16:49:37 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/20 18:17:12 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef CURE_HPP
+# define CURE_HPP
 
-int main(void) {
+# include "AMateria.hpp"
 
-	// Animal animal;
+class Cure : public AMateria {
 
-	Dog	dog;
-	
-	dog.makeSound();
+	public:
+		Cure();
+		Cure(const Cure& other);
+		Cure& operator=(const Cure& other);
+		~Cure();
 
-	return 0;
-}
+		AMateria* clone() const;
+		void use(ICharacter& target);
+};
+
+#endif

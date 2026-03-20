@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 15:33:30 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 15:43:09 by josemigu         ###   ########.fr       */
+/*   Created: 2026/03/20 16:52:15 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/20 18:02:48 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "Ice.hpp"
 
-int main(void) {
+Ice::Ice() : AMateria("ice") {
+	return ;
+}
 
-	// Animal animal;
+Ice::Ice(const Ice& other) {
 
-	Dog	dog;
+}
+
+Ice& Ice::operator=(const Ice& other) {
+
+}
+
+Ice::~Ice() {
 	
-	dog.makeSound();
+}
 
-	return 0;
+AMateria* Ice::clone() const {
+
+}
+
+void Ice::use(ICharacter& target) {
+	
 }

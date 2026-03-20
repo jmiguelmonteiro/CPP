@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 15:33:30 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 15:43:09 by josemigu         ###   ########.fr       */
+/*   Created: 2026/03/20 15:38:12 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/20 15:38:34 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
+
 #include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "ICharacter.hpp"
 
-int main(void) {
+class IMateriaSource
+{
+	public:
+		virtual ~IMateriaSource() {}
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
+};
 
-	// Animal animal;
-
-	Dog	dog;
-	
-	dog.makeSound();
-
-	return 0;
-}
+#endif

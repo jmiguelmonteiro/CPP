@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 15:33:30 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 15:43:09 by josemigu         ###   ########.fr       */
+/*   Created: 2026/03/20 16:52:15 by josemigu          #+#    #+#             */
+/*   Updated: 2026/03/20 18:18:05 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "Cure.hpp"
 
-int main(void) {
+Cure::Cure() : AMateria("cure") {
+	return ;
+}
 
-	// Animal animal;
+Cure::Cure(const Cure& other) {
 
-	Dog	dog;
+}
+
+Cure& Cure::operator=(const Cure& other) {
+
+}
+
+Cure::~Cure() {
 	
-	dog.makeSound();
+}
 
-	return 0;
+AMateria* Cure::clone() const {
+
+}
+
+void Cure::use(ICharacter& target) {
+	
 }
