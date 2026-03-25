@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 15:38:01 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 17:45:37 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/25 12:31:44 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class AMateria {
 		virtual ~AMateria();
 		
 		std::string const & getType() const; //Returns the materia type
+		
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
 };

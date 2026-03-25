@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 16:44:56 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/20 17:42:15 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/25 15:54:44 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CHARACTER_HPP
 
 # include "ICharacter.hpp"
+# include "AMateria.hpp"
 
 class Character : public ICharacter {
 	private:
