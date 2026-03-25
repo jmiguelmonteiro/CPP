@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 16:52:15 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/25 15:27:58 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:05:48 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ Ice::Ice() : AMateria("ice") {
 	return ;
 }
 
-Ice::Ice(const Ice& other) {
-	*this = other;
+Ice::Ice(const Ice& other) : AMateria(other) {
 	return ;
 }
 

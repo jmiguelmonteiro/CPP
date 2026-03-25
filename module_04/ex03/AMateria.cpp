@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 17:04:35 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/25 16:15:12 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:51:16 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ AMateria::~AMateria() {
 
 std::string const & AMateria::getType() const {
 	return this->type;
+}
+
+void AMateria::use(ICharacter& target) {
+	std::cout << "AMateria used on " << target.getName() << std::endl;
+	return ;
 }
