@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 17:55:34 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/25 18:18:41 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/28 17:20:54 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void MateriaSource::learnMateria(AMateria* materia) {
 	for (int i=0; i < 4; i++)
 		if (!this->materia[i]) {
 			std::cout << "Materia " << materia->getType() << " learned" << std::endl;
-			this->materia[i] = materia;
-			return ;
+			this->materia[i] = materia->clone();
+			break ;
 		}
 	delete materia;
 	return ;		

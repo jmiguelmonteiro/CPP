@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 16:44:56 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/25 15:54:44 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/28 17:05:28 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Character : public ICharacter {
 	private:
 		std::string	name;
 		AMateria*	inventory[4];
+		AMateria*	floor[100];
 	public:
 		Character();
 		Character(const Character& other);

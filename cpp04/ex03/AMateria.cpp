@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 17:04:35 by josemigu          #+#    #+#             */
-/*   Updated: 2026/03/25 18:51:16 by josemigu         ###   ########.fr       */
+/*   Updated: 2026/03/28 16:53:13 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ AMateria::AMateria(const AMateria& other) {
 }
 
 AMateria& AMateria::operator=(const AMateria& other) {
-	if (this != &other) {
-		this->type = other.type;
-	}
+	(void)other;
 	return *this;		
 }
 
